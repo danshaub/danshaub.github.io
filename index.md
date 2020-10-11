@@ -1,5 +1,5 @@
-# Beginning Haskell
+# Blogs
 
-## By Dan Haub
+-   [Haskell Beginner Tutorial](HaskellBlog/index.md)
 
-## For CPSC
+# Projects
