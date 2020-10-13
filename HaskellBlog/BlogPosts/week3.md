@@ -101,4 +101,8 @@ If you wanted to define an addition function that takes two NNs and returns an N
     addNN O n = n
     addNN (S n) m = S (addNN n m)
 
+For more on Haskell's Data Types, check out this fantastic article [here](http://learnyouahaskell.com/making-our-own-types-and-typeclasses).
+
+<br>
+
 [Blog Hub](../index) | [Previous](week2) | [Next](week4)
