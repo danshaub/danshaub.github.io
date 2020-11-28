@@ -4,9 +4,15 @@
 
 ## Blog Posts
 
--   [Week 1: Introduction to Functional Programming and Haskell](BlogPosts/week1)
--   [Week 2: Defining functions in Haskell](BlogPosts/week2)
--   [Week 3: Abstract and Recursive Data types in Haskell](BlogPosts/week3)
--   [Week 4: Monads Part 1](BlogPosts/week4)
--   [Week 5: Monads Part 2](BlogPosts/week5)
--   [Week 6](BlogPosts/week6)
+-   [Post 1: Introduction to Functional Programming and Haskell](BlogPosts/post1)
+-   [Post 2: Defining functions in Haskell](BlogPosts/post2)
+-   [Post 3: Abstract and Recursive Data types in Haskell](BlogPosts/post3)
+-   [Post 4: Roman Numeral Calculator](BlogPosts/post4)
+-   [Post 5: Functions Part 2](BlogPosts/post5)
+-   [Post 6: Monads Part 1](BlogPosts/post6)
+-   [Post 7: Monads Part 2](BlogPosts/post7)
+-   [Post 8: Input/Output](BlogPosts/post8)
+-   [Post 9: Introduction to LambdaNat Language](BlogPosts/post9)
+-   [Post 10: LambdaNat Part 2: de Bruijn Index](BlogPosts/post10)
+-   [Post 11: ](BlogPosts/post11)
+-   [Post 12: ](BlogPosts/post12)
