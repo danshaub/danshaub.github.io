@@ -1,6 +1,6 @@
-[Blog Hub](../index) | [Previous](week1) | [Next](week3)
+[Blog Hub](../index) | [Previous](post1) | [Next](post3)
 
-# Week 2<br>Defining functions in Haskell
+# Post 2<br>Defining functions in Haskell
 
 ## The .hs File extension
 
@@ -112,4 +112,4 @@ ys is the first half of the larger list, and zs is the second half.
 
 ---
 
-[Blog Hub](../index) | [Previous](week1) | [Next](week3)
+[Blog Hub](../index) | [Previous](post1) | [Next](post3)

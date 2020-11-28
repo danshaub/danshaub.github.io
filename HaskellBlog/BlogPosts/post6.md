@@ -1,6 +1,6 @@
-[Blog Hub](../index) | [Previous](week3) | [Next](week5)
+[Blog Hub](../index) | [Previous](post5) | [Next](post7)
 
-# Week 4<br>Monads Part 1
+# Post 5<br>Monads Part 1
 
 [Reference](https://www.cs.rit.edu/~swm/cs561/All_About_Monads.pdf)
 [Reference](https://www.youtube.com/watch?v=t1e8gqXLbsU&ab_channel=Computerphile)
@@ -15,4 +15,4 @@
 
 ## What's the point?
 
-[Blog Hub](../index) | [Previous](week3) | [Next](week5)
+[Blog Hub](../index) | [Previous](post5) | [Next](post7)

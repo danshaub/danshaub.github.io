@@ -1,6 +1,6 @@
-[Blog Hub](../index) | [Previous](week2) | [Next](week4)
+[Blog Hub](../index) | [Previous](post2) | [Next](post4)
 
-# Week 3<br>Abstract and Recursive Data types in Haskell
+# Post 3<br>Abstract and Recursive Data types in Haskell
 
 ## Haskell's Data Typing System
 
@@ -105,4 +105,4 @@ For more on Haskell's Data Types, check out this fantastic article [here](http:/
 
 <br>
 
-[Blog Hub](../index) | [Previous](week2) | [Next](week4)
+[Blog Hub](../index) | [Previous](post2) | [Next](post4)

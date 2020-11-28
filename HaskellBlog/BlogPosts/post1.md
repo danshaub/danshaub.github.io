@@ -1,6 +1,6 @@
-[Blog Hub](../index) | [Next](week2)
+[Blog Hub](../index) | [Next](post2)
 
-# Week 1:<br>Introduction to Functional Programming and Haskell
+# Post 1:<br>Introduction to Functional Programming and Haskell
 
 ## Functional Programming
 
@@ -91,4 +91,4 @@ You may have noticed GHCi stall for a while. Press Ctrl + C to interrupt the pro
 
 **_Add some examples of how to work with lists_**
 
-[Blog Hub](../index) | [Next](week2)
+[Blog Hub](../index) | [Next](post2)
