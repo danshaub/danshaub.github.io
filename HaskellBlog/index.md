@@ -14,5 +14,5 @@
 -   [Post 8: Input/Output](BlogPosts/post8)
 -   [Post 9: Introduction to LambdaNat Language](BlogPosts/post9)
 -   [Post 10: LambdaNat Part 2: de Bruijn Index](BlogPosts/post10)
--   [Post 11: ](BlogPosts/post11)
--   [Post 12: ](BlogPosts/post12)
+-   [Post 11: What about Imperative Programming?](BlogPosts/post11)
+-   [Post 12: What is the Unison Programming Language?](BlogPosts/post12)
