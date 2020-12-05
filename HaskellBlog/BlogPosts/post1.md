@@ -83,12 +83,4 @@ As mentioned before, haskell lets you give values to variable names. These don't
 
 You may have noticed GHCi stall for a while. Press Ctrl + C to interrupt the process. Haskell allows for recursive definitions even if they might not terminate. So, when haskell tried to overwright the value for x with a definition including x, it does so recursively, looking to the definition of x from the same line to define x. Because there is no "base case" for this recursion, the process repeats infinitely.
 
-<br>
-
----
-
-## Lists
-
-**_Add some examples of how to work with lists_**
-
 [Blog Hub](../index) | [Next](post2)
