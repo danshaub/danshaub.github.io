@@ -107,4 +107,30 @@ If you try out the command `filter (>5) [2, 6, 7, 3, 1]` you should be left with
 
 See the references for more applications of Higher Order Functions!
 
+<br>
+
+---
+
+## Quick note: Anonymous functions
+
+<br>
+
+In some cases, you won't need to pass a fully defined function to a higher order function, rather you just need a one time use expression. To do this without having to fully implement a function that won't be used more than once, just use anonymous functions! These come directly from [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus), and the syntax reflects that. Remember that the **sole** purpose of anonymous functions is to be passed to higher order functions as parameters.
+
+Anonymous functions come in the form:
+
+    (\x -> [Some Expression])
+
+The `x` is treated as a parameter and can be used in the expression. Values can be passed to the expression like any other function.
+
+Let's take a look at a simple example. Try this out in GHCI
+
+    (\x -> x + 5) 10
+    --> 15
+
+You can also use multiple parameters, and they can have any valid identifier as a name, as long as that name isn't the name of another function.
+
+    (\first second third -> first * second + third) 2 5 6
+    --> 16
+
 [Blog Hub](../index) | [Previous](post4) | [Next](post6)
