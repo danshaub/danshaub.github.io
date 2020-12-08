@@ -9,7 +9,7 @@
 
 <br>
 
-Before we begin a broader discussion of monads (which will only be an introduction, all things said and done), it's best to begin with a relatively simple to grasp example of a monad: the "Maybe" type constructor:
+Before we begin a broader discussion of monads (which will only be an introduction, all things said and done), it's best to begin with a relatively simple to understand example of a monad: the "Maybe" type constructor:
 
     data Maybe a = Nothing | Just a
 
@@ -58,7 +58,7 @@ This is usually written in the following format to reflect a type of notation we
         my >>= (\y ->
             return (x + y)))
 
-Let's break this down a bit. The use of return is the easy part: simply add `x` and `y` together and wrap that in a `Maybe`. The rest of the line is a bit more complicated but is vitally important in how this function works. That part accounts for one or both of the imputs being `Nothing` and makes sure the function evaluates to `Nothing` in that case. Recall that the type of `>>=` is `m a -> (a -> m b) -> m b`. What we're seeing is a bit of function composition, so let's start with the inside call of `>>=`: `my >>= (\y -> return (x + y))`. Here we see an anonymous function that takes some parameter, y and evaluates to `return (x + y)`. It is of type `a -> m b` as required by `>>=`. That function is curried and given as the anonymous function with parameter `x`, notice the `(\x -> `.
+Let's break this down a bit. The use of return is the easy part: simply add `x` and `y` together and wrap that in a `Maybe`. The rest of the line is a bit more complicated but is vitally important in how this function works. That part accounts for one or both of the inputs being `Nothing` and makes sure the function evaluates to `Nothing` in that case. Recall that the type of `>>=` is `m a -> (a -> m b) -> m b`. What we're seeing is a bit of function composition, so let's start with the inside call of `>>=`: `my >>= (\y -> return (x + y))`. Here we see an anonymous function that takes some parameter, y and evaluates to `return (x + y)`. It is of type `a -> m b` as required by `>>=`. That function is curried and given as the anonymous function with parameter `x`, notice the `(\x -> `.
 
 The syntax of that is a bit clunky, so luckily the developers of Haskell introduced `do` notation. This has absolutely nothing to do with `do-while` loops of other languages. The `do` notation is simply shorthand for repeated uses of `bind` and `return`. Anything that can be done with `do` can be done longhand as well, it just looks nicer and is a bit more readable. Translated into `do` notation, our `maybeAdd` function looks like:
 
