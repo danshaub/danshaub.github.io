@@ -12,7 +12,5 @@
 -   [Post 6: Monads Part 1](BlogPosts/post6)
 -   [Post 7: Monads Part 2](BlogPosts/post7)
 -   [Post 8: Input/Output and Compiling](BlogPosts/post8)
--   [Post 9: Introduction to LambdaNat Language](BlogPosts/post9)
+-   [Post 9: Functional Programming in F♯](BlogPosts/post9)
 -   [Post 10: LambdaNat Part 2: de Bruijn Index](BlogPosts/post10)
--   [Post 11: What about Imperative Programming?](BlogPosts/post11)
--   [Post 12: What is the Unison Programming Language?](BlogPosts/post12)
