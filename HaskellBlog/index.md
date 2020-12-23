@@ -13,4 +13,4 @@
 -   [Post 7: Monads Part 2](BlogPosts/post7)
 -   [Post 8: Input/Output and Compiling](BlogPosts/post8)
 -   [Post 9: Functional Programming in F♯](BlogPosts/post9)
--   [Post 10: LambdaNat Part 2: de Bruijn Index](BlogPosts/post10)
+-   [Post 10: A Functioning Functional GUI](BlogPosts/post10)
