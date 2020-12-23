@@ -124,12 +124,11 @@ When making a calculator, we need to keep track of a few things in our `State` t
 
 In code: 
 
-    type State = { Num1 : string 
-                   Num2 : string
+    type State = { Num1 : int
                    Oper : ???
                    Disp : string}
 
-The numbers are strings so typing in values is easier to manage. What kind of variable should we include for the operation? A new one, of course! **Before** the declaration of the `State` add the following code:
+What kind of variable should we include for the operation? A new one, of course! **Before** the declaration of the `State` add the following code:
 
     type Operation = 
         | Unknown
@@ -140,8 +139,7 @@ You can have more than just those two if you like, but I'm keeping it simple. An
 
 We need an intitial state, so let's set one
 
-    let init = { Num1 = "0"
-                 Num2 = "0"
+    let init = { Numb = 0
                  Oper = Unknown
                  Disp = "0" }
 
@@ -158,10 +156,10 @@ Now let's make our messages, one for each button:
         | Seven 
         | Eight 
         | Nine 
-        | Reset 
         | Add 
         | Subtract
         | Evaluate
+        | Reset 
 
 We'll talk about the update function in a bit, but for now, let's just add some temporay code:
 
@@ -177,10 +175,10 @@ We'll talk about the update function in a bit, but for now, let's just add some 
         | Seven -> init
         | Eight -> init
         | Nine -> init
-        | Reset -> init
         | Add -> init
         | Subtract -> init
         | Evaluate -> init
+        | Reset -> init
 
 ---
 
@@ -415,13 +413,34 @@ First things first, let's make the number buttons update the dispaly accordingly
     | Eight -> { state with Disp = if state.Disp = "0" then "8" else state.Disp + "8"}
     | Nine -> { state with Disp = if state.Disp = "0" then "9" else state.Disp + "9"}
 
-Reset already does what it's supposed to, so we don't have to worry about that line.
 
 Pressing either of the two operation numbers should do a few things:
 1. Set the operation.
-2. Ensure both nums are set correctly.
-3. Potentially evaluate if the user is entering a sequence of numbers.
+2. Save the display in Numb
+3. Reset the display.
 
+Luckily, the `with` keyword lets us set multiple values as long as we either separate those values with a semicolon or with a new line. Here's what the code for add and subtract should look like:
+
+    | Add -> 
+        { state with Numb = state.Disp |> int
+                        Disp = "0" 
+                        Oper = Operation.Add}
+    | Subtract -> 
+        { state with Numb = state.Disp |> int
+                        Disp = "0" 
+                        Oper = Operation.Subtract}
+
+Next, evaluate should check perform the operaion on whatever is contained in `Numb` and whatever number is on the display. If no operation is selected, just have it do nothing. To avoid a bunch of `if then else` statements, use `match with` syntax, F#'s equivalent to `case where`. Check it out:
+
+    | Evaluate -> 
+        { state with Disp = match state.Oper with
+                            | Operation.Add -> (state.Numb + (state.Disp |> int)) |> string
+                            | Operation.Subtract -> (state.Numb - (state.Disp |> int)) |> string
+                            | Operation.Unknown -> state.Disp}
+
+Reset already does what it's supposed to, so we don't have to worry about that line.
+
+And there you have it! A working (albeit basic) calculator written entirely in F#! Try to add new features to it if you like, and maybe find ways to make it behave more similar to the calculator on your phone. The possibilities are endless!
 
 [Reference](https://github.com/AvaloniaCommunity/Avalonia.FuncUI/)
 

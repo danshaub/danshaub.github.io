@@ -10,12 +10,10 @@ module Calculator =
         | Add
         | Subtract
     
-    type State = { Num1 : string 
-                   Num2 : string
+    type State = { Numb : int 
                    Oper : Operation
                    Disp : string}
-    let init = { Num1 = "0"
-                 Num2 = "0"
+    let init = { Numb = 0
                  Oper = Unknown
                  Disp = "0" }
 
@@ -30,10 +28,10 @@ module Calculator =
         | Seven 
         | Eight 
         | Nine 
-        | Reset 
         | Add 
         | Subtract
         | Evaluate
+        | Reset 
 
     let update (msg: Msg) (state: State) : State =
         match msg with
@@ -57,15 +55,23 @@ module Calculator =
             { state with Disp = if state.Disp = "0" then "8" else state.Disp + "8"}
         | Nine -> 
             { state with Disp = if state.Disp = "0" then "9" else state.Disp + "9"}
+        | Add -> 
+            { state with Numb = state.Disp |> int
+                         Disp = "0" 
+                         Oper = Operation.Add}
+        | Subtract -> 
+            { state with Numb = state.Disp |> int
+                         Disp = "0" 
+                         Oper = Operation.Subtract}
+        | Evaluate -> 
+            { state with Disp = match state.Oper with
+                                | Operation.Add -> (state.Numb + (state.Disp |> int)) |> string
+                                | Operation.Subtract -> (state.Numb - (state.Disp |> int)) |> string
+                                | Operation.Unknown -> state.Disp}
         | Reset -> 
             init
-        | Add -> 
-            init
-            // { state with Disp = "add" }
-        | Subtract -> 
-            init
-        | Evaluate -> 
-            init
+            
+
     
     let view (state: State) (dispatch) =
         DockPanel.create [
